@@ -48,8 +48,6 @@ jobs:
         run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
       - name: Check code coverage
-        uses: themichaelhall/check-code-coverage@v1
-
-      # fixme: Check code coverage
+        uses: themichaelhall/check-code-coverage@master
 
   # fixme: Check code style
