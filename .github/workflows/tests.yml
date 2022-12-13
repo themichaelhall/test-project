@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         operating-system: ['ubuntu-latest', 'windows-latest', 'macos-latest']
-        php-versions: ['8.0']
+        php-versions: ['8.0', '8.1', '8.2']
 
     steps:
       - name: Checkout source
@@ -24,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: composer update --prefer-stable --no-progress
 
-      - name: Run tests
+      - name: Run unit tests
         run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
       - name: Check code coverage
         uses: themichaelhall/check-code-coverage@v2
         with:
           report: coverage.xml
-          required-percentage: 80
+          required-percentage: 100
