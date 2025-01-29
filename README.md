@@ -4,7 +4,7 @@ A test project to test various CI setups.
 
 ## Requirements
 
-- PHP >= 8.0
+- PHP >= 8.4
 
 ## License
 
